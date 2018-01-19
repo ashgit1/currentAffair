@@ -1,0 +1,55 @@
+<!doctype html>
+<html >
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+    <!-- Semantic UI -->
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css">
+    <!-- Semantic UI Close-->
+
+  </head>
+  <body>
+
+  <script>
+    $(document).ready( function (){
+      $('#currentAffair').DataTable({
+          "ajax": "currentAffair.json",
+          "columns": [
+            { 
+              "data": "topic",
+              "defaultContent": "<i>Not set</i>"
+            },
+            { 
+              "data": "content",
+              "defaultContent": "<i>Not set</i>" 
+            }
+            ]
+        });
+    });
+  </script>
+
+ <div> 
+  <table id="currentAffair" class="ui celled table" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Topic</th>
+                <th>Content</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+  </body>
+</html>
