@@ -1,6 +1,15 @@
 <!doctype html>
 <html >
   <head>
+    <title>CurrentAffair</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- BootStrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Angular and jquery datatbale-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -21,20 +30,20 @@
       $('#currentAffair').DataTable({
           "ajax": "currentAffair.json",
           "columns": [
-            { 
+            {
               "data": "topic",
               "defaultContent": "<i>Not set</i>"
             },
-            { 
+            {
               "data": "content",
-              "defaultContent": "<i>Not set</i>" 
+              "defaultContent": "<i>Not set</i>"
             }
             ]
         });
     });
   </script>
 
- <div> 
+ <div class="container-fluid">
   <table id="currentAffair" class="ui celled table" cellspacing="0" width="100%">
         <thead>
             <tr>
